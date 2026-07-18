@@ -303,18 +303,7 @@ Tu token es válido, pero tu rol (<code>cliente</code>) no tiene permiso para es
 
 <div align="center">
 
-Hecho con 🐾 y NestJS
+Hecho con NestJS
 
 </div>
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
 
