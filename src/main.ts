@@ -7,13 +7,12 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // 1. ¡LA MAGIA DE CORS!
+  // Cors
   // Le permite a un frontend (React, etc.) en otro origen consumir esta API.
   app.enableCors();
-  // Si quisieras ser súper estricto en producción, harías esto:
-  // app.enableCors({ origin: 'http://localhost:5173' });
 
-  // Guardia Global de los DTOs (Etapa 2)
+
+  // Guardia Global de los DTOs
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true, // Borra automáticamente campos que no estén en el DTO

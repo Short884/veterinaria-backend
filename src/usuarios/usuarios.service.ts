@@ -23,7 +23,7 @@ export class UsuariosService {
       throw new BadRequestException('El correo electrónico ya está registrado en el sistema');
     }
 
-    // 2. ¡Pasamos la contraseña por la licuadora de Bcrypt!
+    // 2. Pasamos la contraseña por la licuadora de Bcrypt
     const salt = await bcrypt.genSalt(10);
     const hashPassword = await bcrypt.hash(createUsuarioDto.password, salt);
 

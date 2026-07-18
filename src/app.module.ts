@@ -14,7 +14,7 @@ import { AuthModule } from './auth/auth.module';
       isGlobal: true,
     }),
 
-    // ¡Aquí configuramos la conexión a MySQL! (Etapa 1)
+    // Acá configuramos la conexión a MySQL
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],

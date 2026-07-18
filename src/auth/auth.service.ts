@@ -19,14 +19,14 @@ export class AuthService {
       throw new UnauthorizedException('Credenciales incorrectas (Email falso)');
     }
 
-    // 2. ¡Comparamos la contraseña de texto plano con el Hash de MySQL!
+    // 2. Comparamos la contraseña de texto plano con el Hash de MySQL
     const isPasswordValid = await bcrypt.compare(passwordPlain, usuario.password);
 
     if (!isPasswordValid) {
       throw new UnauthorizedException('Credenciales incorrectas (Password falsa)');
     }
 
-    // 3. Si todo está OK, armamos los datos de la "pulsera" (Payload)
+    // 3. Si todo está OK, se arman los datos de la "pulsera" (Payload)
     const payload = {
       sub: usuario.id,
       email: usuario.email,

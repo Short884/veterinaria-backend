@@ -35,7 +35,7 @@ export class AuthGuard implements CanActivate {
       throw new UnauthorizedException('Token inválido o expirado');
     }
 
-    // 5. Si todo está perfecto, ¡luz verde!
+    // 5. Si todo está perfecto, luz verde
     return true;
   }
 
